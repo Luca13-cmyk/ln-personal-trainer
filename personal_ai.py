@@ -24,12 +24,12 @@ def resource_path(relative_path):
     return os.path.join(base_path, relative_path)
 
 
-# model_path=resource_path("pose_landmarker_full.task")
-model_path="https://uploadthing.com/f/7e01619c-99b3-4502-91bb-7551fdcb1de2-r98ovv.task"
-# The Perfect Push Up _ Do it right! - YouTube e mais 13 páginas - Pessoal — Microsoft​ Edge 2023-12-29 02-38-27.mp4
+model_path=resource_path("pose_landmarker_full.task")
+# model_path="https://uploadthing.com/f/7e01619c-99b3-4502-91bb-7551fdcb1de2-r98ovv.task"
+
 class PersonalAI:
-    def __init__(self, file_name="https://utfs.io/f/d063562d-9c7f-4e90-9dc9-c1d5055a4255-ai6rjk.mp4"):
-        self.file_name = file_name
+    def __init__(self, file_name="The Perfect Push Up _ Do it right! - YouTube e mais 13 páginas - Pessoal — Microsoft​ Edge 2023-12-29 02-38-27.mp4"):
+        self.file_name = resource_path(file_name)
         self.image_q = queue.Queue()
 
         self.options = python.vision.PoseLandmarkerOptions(
